@@ -1,0 +1,58 @@
+@import "../../styles/palette.scss";
+
+.panel {
+  color: lighten($color-bg, 60%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 0 1em;
+  .controls {
+    height: 34px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 50%;
+  }
+  .notifications {
+    height: 70px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .reset {
+    color: $color-orange;
+    cursor: pointer;
+  }
+}
+
+.counter {
+  .match-counter {
+    background-color: $color-green;
+    color: $color-bg;
+    padding: 1em;
+    border-radius: 0.3em;
+  }
+  .failed-counter {
+    background-color: $color-red;
+    color: $color-bg;
+    padding: 1em;
+    border-radius: 0.3em;
+  }
+  .reset {
+    background-color: $color-orange;
+    color: $color-bg;
+    padding: 1em;
+    border-radius: 0.3em;
+    transition: color 0.2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    &:hover {
+      background-color: darken($color-orange, 10);
+    }
+  }
+}

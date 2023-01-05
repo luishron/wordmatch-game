@@ -1,0 +1,140 @@
+@import "./palette.scss";
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $dark-0;
+  font-size: 18px;
+  font-family: "Lato";
+  color: $color-text;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  line-height: 1.5em;
+}
+.card {
+  padding: 0.8em 1.2em;
+  background-color: $dark-20;
+  border-radius: 0.3em;
+  border: 2px solid $dark-30;
+  font-size: 1em;
+  display: inline-block;
+  box-shadow: darken($color-blue, 10%) 0px 3px 3px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    background-color: $dark-30;
+    border-color: $dark-40;
+    box-shadow: darken($color-blue, 20%) 0px 3px;
+  }
+}
+.selected {
+  background-color: $dark-30;
+  border-color: $color-green;
+  box-shadow: darken($color-green, 20%) 0px 3px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1em;
+  margin: 2em 0;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.match-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  color: $color-green;
+}
+.failed-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  color: $color-red;
+}
+.english,
+.spanish {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  border: 1px solid $dark-20;
+  border-radius: 0.3em;
+  background-color: $dark-10;
+}
+
+.matched {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2em 0;
+  padding: 2em 0;
+  background-color: $dark-10;
+  border: 2px solid $dark-20;
+  border-radius: 0.3em;
+  gap: 1em;
+  color: $color-text;
+  padding: 1em;
+  gap: 1em;
+  .card {
+    color: $dark-90;
+    background-color: $dark-20;
+    border: 2px solid darken($color-green, 30);
+    box-shadow: darken($color-green, 30) 0px 3px;
+  }
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: 1400px) {
+    max-width: 1385px;
+  }
+}
+.btn {
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 0.3em;
+}
+.btn-info {
+  background-color: $color-green;
+  color: $color-text;
+}
+.brand {
+  a {
+    text-decoration: none;
+    color: $color-text;
+    font-weight: bold;
+  }
+}
+.congrats {
+  color: $color-green;
+  text-align: center;
+  width: 100%;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+a {
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.app {
+  min-height: calc(100vh - 210px);
+}

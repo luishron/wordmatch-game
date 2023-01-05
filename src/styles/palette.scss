@@ -1,0 +1,25 @@
+$color-green: #5f9e44;
+$color-blue: #2d7aa9;
+$color-orange: #d99a3c;
+$color-purple: #7d5bac;
+$color-red: #cc5c5c;
+$color-bg: #01092a;
+$color-text: #fff;
+
+$color-red-light: lighten($color-red, 50%);
+$color-red-lighter: lighten($color-red, 75%);
+$color-red-dark: darken($color-red, 25%);
+$color-red-darker: darken($color-red, 50%);
+
+// dark
+$dark-0: #01092a;
+$dark-10: #0b0e31;
+$dark-20: #161438;
+$dark-30: #211a3e;
+$dark-40: #2c2145;
+$dark-50: #372a4c;
+$dark-60: #423253;
+$dark-70: #4d385a;
+$dark-80: #584360;
+$dark-90: #634b67;
+$dark-100: #f7e9f5;

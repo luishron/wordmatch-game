@@ -1,0 +1,38 @@
+@import "../../styles/palette.scss";
+
+footer {
+  height: 70px;
+  color: $dark-90;
+  width: 100%;
+
+  .container {
+    border-top: 1px solid $dark-20;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 770px) {
+      flex-direction: column;
+    }
+  }
+  .copyright {
+    a {
+      color: $dark-90;
+      &:hover {
+        color: $dark-100;
+      }
+    }
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  a {
+    color: $dark-90;
+    &:hover {
+      color: $dark-100;
+    }
+  }
+}

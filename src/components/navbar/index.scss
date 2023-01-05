@@ -1,0 +1,30 @@
+@import "../../styles/palette.scss";
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: $color-purple;
+  border: 2px solid var(--gray-30);
+  margin-bottom: 2em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+  }
+  .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    color: $color-text;
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
