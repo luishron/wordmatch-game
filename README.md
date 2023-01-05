@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+## Descripción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este código implementa un juego de memoria en el que se deben encontrar parejas de palabras en inglés y español. Al completar el juego se muestra un mensaje de felicitación. También se lleva un conteo de los errores que se cometen al seleccionar parejas incorrectas.
 
-## Available Scripts
+## Dependencias
 
-In the project directory, you can run:
+Este código requiere de las siguientes dependencias:
 
-### `npm start`
+- `react`: utilizado para crear componentes de interfaz de usuario
+- `react-hooks`: utilizado para manejar el estado y otras características de los componentes de React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Variables de estado
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este código utiliza las siguientes variables de estado:
 
-### `npm test`
+- `matchedWords`: almacena las parejas de palabras correctamente seleccionadas.
+- `unmatchedWords`: almacena las palabras que todavía no han formado parte de una pareja correcta.
+- `selectedWords`: almacena las palabras seleccionadas en el juego actual.
+- `showErrorMessage`: determina si se muestra un mensaje de error al seleccionar una pareja incorrecta.
+- `errorCounter`: almacena el número de errores cometidos en el juego actual.
+- `englishWords`: almacena las palabras en inglés disponibles para jugar.
+- `spanishWords`: almacena las palabras en español disponibles para jugar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funciones
 
-### `npm run build`
+Este código utiliza las siguientes funciones:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `resetMatchedWords`: establece todas las variables de estado a sus valores iniciales.
+- `handleClick`: selecciona una palabra y la agrega a la lista de palabras seleccionadas.
+- `updateUnmatchedWords`: elimina las palabras seleccionadas de las listas de palabras disponibles para jugar.
+- `useEffect`: actualiza el estado de la aplicación en función de los cambios en las variables de estado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Componentes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este código utiliza los siguientes componentes:
 
-### `npm run eject`
+- `Navbar`: muestra información sobre el progreso del juego y el número de errores cometidos.
+- `CardGrid`: muestra las tarjetas con las palabras disponibles para seleccionar.
+- `Card`: representa una tarjeta individual con una palabra.
+- `Panel`: muestra el juego en sí y controla la lógica del juego.
+- `Message`: muestra mensajes al usuario.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Iniciando el proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para iniciar el proyecto en tu entorno de desarrollo, sigue estos pasos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  Clona el repositorio en tu equipo: `git clone https://github.com/luishron/wordmatch-game/`
+2.  Accede al directorio del proyecto: `cd nombre-del-repositorio`
+3.  Instala las dependencias necesarias: `npm install` o `yarn install`
+4.  Inicia el servidor de desarrollo: `npm start` o `yarn start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+La aplicación se abrirá automáticamente en tu navegador en la dirección `http://localhost:3000`.
 
-## Learn More
+## Colaborando
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Si quieres colaborar en el proyecto, sigue estos pasos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  Crea un [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) del repositorio.
+2.  Clona el repositorio en tu equipo: `git clone https://github.com/luishron/wordmatch-game/`
+3.  Accede al directorio del proyecto: `cd nombre-del-repositorio`
+4.  Crea una rama para tu contribución: `git checkout -b nombre-de-la-rama`
+5.  Realiza tus cambios en el código y asegúrate de probarlos y documentarlos adecuadamente.
+6.  Commitea tus cambios: `git commit -am "Mensaje de commit describiendo los cambios"`
+7.  Sube tus cambios a tu repositorio remoto: `git push origin nombre-de-la-rama`
+8.  Crea una [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) desde tu repositorio hacia el repositorio principal.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Asegúrate de seguir las guías de estilo y de contribución del proyecto para que tu pull request tenga más posibilidades de ser aceptada.
